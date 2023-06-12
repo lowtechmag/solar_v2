@@ -70,7 +70,7 @@ authors: ["Kris De Decker" ]
 categories: ["Low-tech Solutions"]
 tags: ["ICT" ]
 featured_image: "tegola-project-low-tech-internet.png"
-draft: False
+draft: false
 ---
 ```
 
@@ -78,7 +78,7 @@ In the case of a translation you can specify the translators as well:
 
 __!! Careful, only some metadata should to be translated, the other needs to be left intact.__
 
-Specifically, the metadata keys (`title`, `date`, `summary` etc) should remain intact wheras the metadata values can be translated (such as the contents of `title` or `summary`).
+Specifically, the metadata keys (`title`, `date`, `summary` etc.) should remain intact wheras the metadata values can be translated (such as the contents of `title` or `summary`).
 
 However do __not__ translate the values of `slug`, `categories`, `tags` and `featured_image`.
 
@@ -88,7 +88,7 @@ title: "Cómo construir una Internet de Baja Tecnología" #TO TRANSLATE
 date: "2015-10-26"
 summary: "Si queremos que internet siga funcionando en circunstancias en que el acceso a la energía es más limitado, entonces podemos aprender lecciones importantes de las tecnologías de red alternativas." #TO TRANSLATE
 slug: "how-to-build-a-low-tech-internet"
-lang: "es" #ADD THE CORRECT LANG code (fr, es,etc.)
+lang: "es" #ADD THE CORRECT LANG code (fr, es, etc.)
 authors: ["Kris De Decker" ]
 categories: ["Low-tech Solutions"]
 tags: ["ICT" ] 
@@ -125,6 +125,21 @@ Will die fighting, or live free,
 And down with all kings but King Ludd” 
 {{</ comment >}}
 ```
+
+### Internal links
+To link to other articles on the solar website, we use a hugo specific shortcode to call the article folder. This has several advantages: 
+1. The url will not break if the article `title` or `date` change, since we are calling the file itself. 
+2. When used in a transaltion, the shortcode automatically points to the translated article, if it exists, or defaults to english. 
+- _Sytnax:_
+```go
+[Text]({{< ref "/path-to-folder" >}})
+``` 
+- _Examples:_
+```go
+[Donate]({{< ref "/donate" >}})
+[here]({{< ref "/posts/power-water-networks/" >}})
+```
+
 
 ## Author & Translator pages
 
