@@ -1,0 +1,42 @@
+<footer class="site-footer">
+    <div id=page-size>{{ i18n "pagesize" | default "Page Size"}}: <span id="size-value"> $PLACEHOLDER</span></div>
+    <div id=back-to-top><a id="" href="#top" title="Back to top"> ↑ </a></div>
+    <h2>
+        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    </h2>
+    <div class="dashboard">
+        <ul class="grid">
+            <li>
+                <h3>Server Stats</h3>
+                <dl id="stats">
+                </dl>
+            </li>
+            <li>
+                <h3>Forecast</h3>
+                <div class="forecast"></div>
+            </li>
+            <li>
+                <h3>Info</h3>
+                {{ partial "site-footer" }}
+            </li>
+            <li>
+                <h3>Contact</h3>
+                <p>
+                    &copy; Kris De Decker<br> solar [at] lowtechmagazine [dot] com</p>
+
+                <div class="social">
+                    <!--  RSS FEED -->
+                    <a href="/feeds" type="application/atom+xml" rel="alternate" target="_blank"><svg viewBox="0 0 80 80" class="icon"><title>RSS Feed</title><circle cx="19.91" cy="58.23" r="6.86"/><path d="M67.89,65.72H55.7A41.86,41.86,0,0,0,13.89,23.91V11.73A54.06,54.06,0,0,1,67.89,65.72Z"/><path d="M48.93,65.72H36.75A22.88,22.88,0,0,0,13.89,42.87V30.68A35.08,35.08,0,0,1,48.93,65.72Z"/></svg></a>
+
+                    <a href="https://twitter.com/lowtechmagazine" target="_blank"><svg viewBox="0 0 80 80" class="icon"><title>Twitter</title><path d="M65.05,29.23c0,.56,0,1.12,0,1.68,0,17.1-13,36.8-36.8,36.8A36.54,36.54,0,0,1,8.44,61.91a26.68,26.68,0,0,0,3.12.16,25.9,25.9,0,0,0,16.06-5.53,13,13,0,0,1-12.09-9,16.28,16.28,0,0,0,2.44.2,13.67,13.67,0,0,0,3.4-.44A12.93,12.93,0,0,1,11,34.64v-.16a13,13,0,0,0,5.85,1.64,13,13,0,0,1-4-17.3A36.76,36.76,0,0,0,39.51,32.36a14.58,14.58,0,0,1-.32-3,12.95,12.95,0,0,1,22.38-8.85,25.45,25.45,0,0,0,8.21-3.12,12.9,12.9,0,0,1-5.69,7.13,25.93,25.93,0,0,0,7.45-2A27.79,27.79,0,0,1,65.05,29.23Z"/></svg></a>
+
+                    <a href="https://www.patreon.com/lowtechmagazine" target="_blank"><svg viewBox="0 -4.5 256 256" transform="scale(0.85)"  preserveAspectRatio="xMidYMid" class="icon"><title>Patreon</title><path d="M45.1355837,0 L45.1355837,246.35001 L0,246.35001 L0,0 L45.1355837,0 Z M163.657111,0 C214.65668,0 256,41.3433196 256,92.3428889 C256,143.342458 214.65668,184.685778 163.657111,184.685778 C112.657542,184.685778 71.3142222,143.342458 71.3142222,92.3428889 C71.3142222,41.3433196 112.657542,0 163.657111,0 Z"> </path></svg></a>
+
+                    <a href='{{ i18n "newsletterlink" | default .Site.Params.Newsletter }}' target="_blank"><svg viewBox="0 0 80 80" class="icon"><title>Newsletter</title><path d="M4.95,13.14v55H74.33v-55Zm54.34,8.12L39.64,39.74,20,21.26ZM13.07,60V25.91l26.56,25,26.57-25V60Z"/></svg></a>
+                </div>
+                <!-- /.social -->
+
+            </li>
+        </ul>
+    </div>
+</footer>

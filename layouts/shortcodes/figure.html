@@ -1,0 +1,58 @@
+{{- $old_filename := .Get "src" -}}
+{{- $img := (.Page.Resources.ByType "image").GetMatch (path.Join "images" $old_filename ) -}}
+{{- if $img -}}
+{{- $thumb := $img.Fit "800x800 q90 webp" -}}
+{{- $new_filename := replace $old_filename (path.Ext $old_filename) "" -}}
+{{- $dithered := printf "images/dithers/%s_dithered.png" $new_filename -}}
+{{ $dithered_image := (.Page.Resources.ByType "image").GetMatch $dithered }}
+{{- $optBlock := dict "display" "block" -}}
+{{- $alt  := .Inner -}}
+<div class="article-img {{if le $img.Width (mul $img.Height 1.2)}} vertical{{end}}">
+<figure data-imgstate="dither">
+<img src="{{with $dithered_image }}{{ .Permalink }}{{end}}" alt='{{ with $alt }}{{ $alt | markdownify| plainify }}{{ else }}{{ .Get "alt" }}{{ . | markdownify| plainify }}{{ end }}' data-original="{{if $thumb}}{{$thumb.Permalink}}{{else}}images/{{$old_filename }}{{end}}" data-dither="{{with $dithered_image }}{{ .RelPermalink }}{{end}}" loading="lazy"/> </figure>
+<div class="figure-controls">
+<figcaption class="caption">
+
+{{ .Inner  }}<svg class="dither-toggle icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect class="svg_fill" x="13.51" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="37.93" y="37.86" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="13.51" y="62.14" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="62.14" width="24.28" height="24.28"/>
+  </svg>
+<div class="imgindicator">
+<span class="tooltip view-orig">
+  {{ i18n "vieworig" | default "View original image"}}
+</span>
+<span class="tooltip view-dither">
+  {{ i18n "viewdither" | default "View dithered image"}}
+</span>
+</div>
+</figcaption>
+</div>
+</div>
+
+{{- else -}}
+
+{{ $new_filename := replace $old_filename (path.Ext $old_filename) ""}}
+{{ $dithered := printf "images/dithers/%s_dithered.png" $new_filename }}
+{{ $dithered_image := (.Page.Resources.ByType "image").GetMatch $dithered }}
+{{- $alt  := .Inner -}}
+<div class="article-img">
+<figure data-imgstate="dither">
+<img src="{{with $dithered_image }}{{ .Permalink }}{{end}}" alt='{{ with $alt }}{{ $alt | markdownify| plainify }}{{ else }}{{ .Get "alt" }}{{ . | markdownify| plainify }}{{ end }}' data-original="images/{{$old_filename }}" data-dither="{{with $dithered_image }}{{ .Permalink }}{{end}}" loading="lazy"/> </figure>
+<div class="figure-controls">
+<figcaption class="caption">
+
+{{ .Inner }}<svg class="dither-toggle icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect class="svg_fill" x="13.51" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="37.93" y="37.86" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="13.51" y="62.14" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="62.14" width="24.28" height="24.28"/>
+  </svg>
+<div class="imgindicator">
+<span class="tooltip view-orig">
+  {{ i18n "vieworig" | default "View original image"}}
+</span>
+<span class="tooltip view-dither">
+  {{ i18n "viewdither" | default "View dithered image"}}
+</span>
+</div>
+</figcaption>
+</div>
+</div>
+{{end}}
+    

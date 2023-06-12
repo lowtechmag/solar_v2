@@ -1,0 +1,12 @@
+{{- $path := .Get 0 -}}
+{{- with site.GetPage $path -}}
+  {{- .Permalink -}}
+{{- else -}}
+  {{- with .Page.Sites.First.GetPage $path -}}
+    {{- .Permalink -}}
+ {{/*  code to produce errors on not found  */}}
+  {{- else -}}
+    {{/*  {{- warnf "The %q shortcode was unable to resolve %q to a page. See %s" .Name $path .Position -}}  */}}
+
+  {{- end -}}
+{{- end -}}

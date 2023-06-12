@@ -1,0 +1,56 @@
+[sitesubtitle]
+    other = 'Ce site fonctionne à l’énergie solaire, et se retrouve parfois hors-ligne'
+[about]
+    other = 'À propos'
+[lowtechtitle]
+    other = 'Solutions Low-tech'
+[lowtechdescription]
+    other = 'Des possibilités intéressantes se présentent lors de la combinaison de l’ancienne technologie avec de nouvelles connaissances et de nouveaux matériaux, ou lors de l’application d’anciens concepts et de connaissances traditionnelles à la technologie moderne.'
+[hightechtitle]
+    other = 'Problèmes High-tech'
+[hightechdescription]
+    other = 'Le progrès technologique est devenu l’idole de notre société, mais il crée plus de problèmes qu’il en résout.'
+[obsoletetitle]
+    other = 'Technologie Ancienne'
+[obsoletedescription]
+    other = 'Il y a beaucoup de potentiel dans les connaissances et technologies anciennes et souvent oubliées lorsqu’il s’agit de concevoir une société durable.'
+[offline]
+    other = 'Lire le magazine hors-ligne'
+[archives]
+    other = 'Archive'
+[donate]
+    other = 'Faire un don'
+[trans]
+    other = 'Traduit par'
+[newsletterlink]
+    other = 'https://d69baa34.sibforms.com/serve/MUIEANc2lrp0ZlxefJj9bGWkRWAP8XKI8G25tXyMryhx1Q6iKLoxg-A9u3QuJxksFS7rQuYNdNjVBqcJfwig9kXB6QzKRFg0KK2ZhiJjarVqjLKhFw2Ej58I5aLFMcgBWzD0MrDKgWiQgF_qMW1-rhMF_nsEY44QyiGRITSt0oJGZGZMjXkhgKH6t_x5-HgMgcnO1J4fSoQ_2iw-'
+[pagesize]
+    other = 'Taille de la page'
+[written_by]
+	other = 'Ecrit par'
+[translated_by]
+	other = 'Traduit par'
+[authors]
+	other = 'Auteurs'
+[translators]
+	other = 'Traducteurs'
+[contributors]
+	other = 'Contributeurs'
+[theme]
+	other = 'Thème'
+[translations]
+    other = 'Traductions'
+[vieworig]
+	other = "Voir l'original"
+[viewdither]
+	other = 'Voir la version compressée'
+#post-footer	
+[subscribeNEWS]
+	other = 'Abonnez-vous à notre newsletter'
+[supportLTM]
+	other = 'Soutenez Low-tech Magazine sur'
+[or]
+	other = 'ou'
+[readoffline]
+	other = 'Lire le magazine sur papier'
+

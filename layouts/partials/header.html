@@ -1,0 +1,9 @@
+<header class="site-header">
+  <h1><a id="top" href="{{ absLangURL "/" }}">{{ site.Title }}</a></h1>
+  <div class="subtitle">
+     <a href="{{ absLangURL "power" }}">{{i18n "sitesubtitle" | default .Site.Params.description}}      
+    </a>
+  </div>
+  {{ partial "nav" . }}
+ 
+</header>

@@ -1,0 +1,22 @@
+# ---> Hugo
+# Generated files by hugo
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
+
+.DS_Store
+
+# solar_v2 theme specific
+content/*/*/images/dithers/
+content/*/images/dithers/
+
+#Python stuff
+__pycache__/
+*.py[cod]
+*$py.class
+

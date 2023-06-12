@@ -1,0 +1,20 @@
+<nav id="menu">
+    <div id="menu-s">
+        {{ partial "lang-nav" . }}
+        <span id="m-btn">menu</span>
+    </div>
+    <ul id="menu-list">
+     
+        {{ $currentPage := . }} {{ range .Site.Menus.main }}
+        <li class="{{ if $currentPage.HasMenuCurrent " main " . }}active {{ end }}">
+            <a href="{{ if i18n .Identifier }} {{ absLangURL .URL }} {{else}} {{.URL}} {{ end }}" data-nav="{{.Name | urlize}}" {{if strings.HasPrefix .URL "https" }} target="_blank" {{end}}>
+                <span>{{ i18n .Identifier | default .Name }}</span>
+            </a>
+        </li>
+        {{ end }}
+        <li class="rss">
+            <a href='{{ i18n "newsletterlink" | default .Site.Params.Newsletter }}' target="_blank"><svg viewBox="0 0 80 80" class="icon"><title>Newsletter</title><path d="M4.95,13.14v55H74.33v-55Zm54.34,8.12L39.64,39.74,20,21.26ZM13.07,60V25.91l26.56,25,26.57-25V60Z"/></svg></a>
+            <a href="/feeds" type="application/atom+xml" rel="alternate" target="_blank"><svg viewBox="0 0 80 80" class="icon"><title>RSS Feed</title><circle cx="19.91" cy="58.23" r="6.86"/><path d="M67.89,65.72H55.7A41.86,41.86,0,0,0,13.89,23.91V11.73A54.06,54.06,0,0,1,67.89,65.72Z"/><path d="M48.93,65.72H36.75A22.88,22.88,0,0,0,13.89,42.87V30.68A35.08,35.08,0,0,1,48.93,65.72Z"/></svg></a>
+        </li>
+    </ul>
+</nav>

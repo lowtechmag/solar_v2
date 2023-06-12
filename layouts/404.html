@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<main class='article {{ range .Params.categories }} {{ . | urlize }} {{ end }}'>
+
+    <article id="{{ .Title | urlize }}">
+        <section id="content" class="article">
+            <header class="entry-header">
+                <h1 class="entry-title">
+                    {{ .Title }}</h1>
+
+                <p class="summary">
+                    <p class="summary">
+                        {{ .Summary }}
+                    </p>
+
+                </p>
+
+            </header>
+
+            <div class="entry-content">
+                <p class="summary">
+                    {{ .Content }}
+                </p>
+
+            </div>
+
+        </section>
+
+    </article>
+</main>
+{{ end }}

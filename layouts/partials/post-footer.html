@@ -1,0 +1,9 @@
+{{- $newsletterlink := i18n "newsletterlink" | default "https://d69baa34.sibforms.com/serve/MUIEAJWIw9w82Dl4ua6FQArPaI-3Qb-zVTwPNabHQgFH51MiGF69Smy9LOC_HPoUmBj0emaXsXT87gcQXDPvtu-AZsJCHWhkkv21CdrcQu4GdnYAhZ-MrIPhwGDecagLzYxqfvkaqXg2ODcbJU4ByoDmzJK3ZTczDo2jcWtfn-En0MGKLVkgxx9TgdHqYoPabMJCMF-agLEclEwv"
+-}}
+<div class="post-footer">
+    <ul>
+        <li><a href="{{$newsletterlink}}">{{i18n "subscribeNEWS" | default "Subscribe to our newsletter"}}</a>.</li>
+        <li> {{i18n "supportLTM" | default "Support Low-tech Magazine via"}} <a href="https://www.paypal.me/lowtechmagazine">Paypal</a> {{i18n "or" | default "or"}} <a href="https://www.patreon.com/lowtechmagazine">Patreon</a>.</li>
+        <li><a href="{{ absLangURL "offline-reading/" }}">{{i18n "readoffline" | default "Read Low-tech Magazine offline"}}</a>.</li>
+    </ul>
+</div>

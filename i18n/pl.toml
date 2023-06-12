@@ -1,0 +1,51 @@
+[sitesubtitle]
+	other = 'Ta strona zasilana jest energią słoneczną co oznacza, że czasami może być niedostępna.'
+[about]
+	other = 'O nas'
+[lowtechtitle]
+	other = 'Proste technologie, proste rozwiązania'
+[lowtechdescription]
+	other = 'Wiele współczesnych problemów można rozwiązać łącząc dawne technologie ze współczesną wiedzą i nowoczesnymi materiałami, lub aplikując tradycyjne podejście i materiały do nowoczesnych technologii.'
+[hightechtitle]
+	other = 'Problemy zaawansowanych technologii'
+[hightechdescription]
+	other = 'Technologia stała się bogiem naszego społeczeństwa, jednak rozwój technologiczny niesie ze sobą nie tylko korzyści, ale również zagrożenia.'
+[obsoletetitle]
+	other = 'Zapomniane technologie'
+[obsoletedescription]
+	other = 'W zapomnianych technologiach minionych czasów tkwi wielki potencjał do stworzenia nowego, zrównoważonego społeczeństwa.'
+[offline]
+	other = 'Czytanie offline'
+[archives]
+	other = 'Archiwum'
+[donate]
+	other = 'Wspomóż nas'
+[trans]
+	other = 'Przekład'
+[written_by]
+	other = ''
+[translated_by]
+	other = 'Przekład '
+[authors]
+	other = ''
+[translators]
+	other = ''
+[contributors]
+	other = ''
+[translations]
+	other= ''	
+[pagesize]
+    other = 'Rozmiar strony'
+[vieworig]
+	other = ''
+[viewdither]
+	other = ''
+# post-footer	
+[subscribeNEWS]
+	other = 'Zapisz się do naszego newslettera'
+[supportLTM]
+	other = 'Wesprzyj Low-tech Magazine przez'
+[or]
+	other = 'lub'
+[readoffline]
+	other = 'Czytaj Low-tech Magazine off-line'

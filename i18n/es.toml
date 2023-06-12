@@ -1,0 +1,53 @@
+[sitesubtitle]
+	other = 'Este sitio web funciona con energía solar, lo que significa que en ocasiones estará fuera de línea.'
+[about]
+	other = 'Acerca de'
+[lowtechtitle]
+	other = 'Soluciones de Baja Tecnología'
+[lowtechdescription]
+	other = 'Posibilidades interesantes surgen cuando se combina la tecnología antigua con nuevos conocimientos y nuevos materiales, o cuando se aplican conceptos tradicionales a la tecnología moderna.'
+[hightechtitle]
+	other = 'Problemas de Alta Tecnología'
+[hightechdescription]
+	other = 'La tecnología se ha convertido en el ídolo de nuestra sociedad, pero el progreso tecnológico está, en la mayoría de los casos, dirigido a resolver problemas causados por las mismas invenciones técnicas anteriores.'
+[obsoletetitle]
+	other = 'Tecnologías Obsoletas'
+[obsoletedescription]
+	other = 'Existe un gran potencial en el conocimiento y las tecnologías pasadas, las cuales son a menudo olvidadas a la hora de diseñar una sociedad sostenible'
+[offline]
+	other = 'Lectura fuera de línea'
+[archives]
+	other = 'Archivo'
+[donate]
+	other = 'Donaciones'
+[trans]
+	other = 'Traducido por'
+[newsletterlink]
+	other = 'https://d69baa34.sibforms.com/serve/MUIEAEZUWQsqfc4iKwh6GDA0LS_6AE98wa1FP5PR4GpWzonWKBB5kuC2lPxvZDfq3TFEMX0TRy6KUp0QmzTaqBvvisJ5zpgu6FeI2lTw-8WjgPZBWxio3IKivik9Pd-EyiEzPwXuAkwkw0jhIXWwx2mYOuSPW06G1aOktFLZ2oV8YP58E2eMWj1AG-FK7PWiZXGE28K8WvV-ZPfT'
+[pagesize]
+	other = 'Tamaño de página'
+[written_by]
+	other = ''
+[translated_by]
+	other = 'Traducido por'
+[authors]
+	other = ''
+[translators]
+	other = ''
+[contributors]
+	other = ''
+[translations]
+	other= ''	
+[vieworig]
+	other = ''
+[viewdither]
+	other = ''
+#post-footer	
+[subscribeNEWS]
+	other = 'Suscríbete a nuestro boletín'
+[supportLTM]
+	other = 'Apoye a Low-tech Magazine a través de'
+[or]
+	other = 'o'
+[readoffline]
+	other = 'Lea Low-tech Magazine sin conexión'

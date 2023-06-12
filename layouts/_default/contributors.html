@@ -1,0 +1,57 @@
+{{ define "main" }}
+<main>
+    <section class="article" id="authors">
+        <header class="entry-header">
+            <h1 class="entry-title">{{ i18n "contributors" | default "Contributors"}}</h1>
+            <p class="summary">
+                {{ .Summary }}
+            </p>
+
+            {{ if .IsTranslated }}
+            <div class="metadata">
+                <div class="translations">
+                    {{i18n "translations" | default "Translations" }} {{ range .Translations }}
+                    <a href="{{ .Permalink }}">{{ .Lang }}</a> {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </header>
+        <div class="entry-content">
+            <p>
+                {{ .Content }}
+            </p>
+
+            {{/* {{printf "%#v" .Site.Taxonomies }} */}}
+
+            <h2>{{i18n "authors" | default "Authors" }}</h2>
+
+            {{ range $key, $author := .Site.Taxonomies.authors.ByCount }}
+           
+            <details>
+                <summary>{{ .Page.Title }} ({{ .Count }})</summary>
+                <ul class="page-list">
+                    {{ range $author.Pages }} 
+                    {{ if not (in .Params.categories "About") }}
+                    <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
+                    {{ end }}
+                    {{ end }}
+                </ul>
+            </details>
+            {{ end }}
+            <h2>{{i18n "translators" | default "Translators" }} <span>({{ .Language.LanguageName }})</span></h2>
+            {{ if .Site.Taxonomies.translators }} {{ range $trans, $translator := .Site.Taxonomies.translators.ByCount }}
+            <details>
+                <summary>{{ .Page.Title }} ({{ .Count }})</summary>
+                <ul class="page-list">
+                    {{ range $translator.Pages }}
+                    <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
+                    {{ end }}
+                </ul>
+            </details>
+            {{ end }} {{ else }}
+            <p>{{i18n "notrans" | default "There are no translators for this language. The author(s) handled the translations directly." }}</p>
+            {{ end }}
+        </div>
+    </section>
+</main>
+{{ end }}

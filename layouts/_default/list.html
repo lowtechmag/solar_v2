@@ -1,0 +1,25 @@
+{{ define "main" }} {{ $categoryTitle := .Title }} {{ $categoryDescription := ' ' }} 
+{{ if (eq .Data.Term "Low-tech Solutions") }} {{ $categoryTitle = i18n "lowtechtitle" }} 
+{{ $categoryDescription = i18n "lowtechdescription" | default "Interesting possibilities arise when you combine old technology with new knowledge and new materials, or when you apply old concepts and traditional knowledge to modern technology." }}
+{{ else if (eq .Data.Term "High-tech Problems")}} {{ $categoryTitle = i18n "hightechtitle" }} {{ $categoryDescription = i18n "hightechdescription" | default "Technology has become the idol of our society, but technological progress is—more often than not—aimed at solving problems caused by earlier technical inventions." }}
+{{ else if (eq .Data.Term "Obsolete Technology")}} {{ $categoryTitle = i18n "obsoletetitle" }} {{ $categoryDescription = i18n "obsoletedescription" | default "There is a lot of potential in past and often forgotten knowledge and technologies when it comes to designing a sustainable society." }} 
+{{ else if (eq .Data.Term "About")}} {{ $categoryTitle = i18n "about" }} {{ $categoryDescription = i18n "aboutdescription" | default "" }}{{ end }}
+<main class="article-list">
+    <header>
+        {{ if (eq .Data.Singular "author")}} {{ i18n "written_by" | default "Written by"}} {{ else if (eq .Data.Singular "translator")}} {{ i18n "translated_by" | default "Translated by"}} {{ else if (eq .Data.Singular "tag")}} {{ i18n "theme" | default "Theme"}}{{ end }}
+        <h1 class="entry-title">{{ $categoryTitle | default .Title }}</h1>
+        {{ if not (eq $categoryDescription ' ') }}
+        <p class="summary">{{$categoryDescription}}
+        </p>
+        {{ end }}
+    </header>
+    <section id="list" class="grid">
+        {{ $allposts := .Pages }}
+        {{ $notunlisted := where .RegularPages ".Params.unlisted" "!=" "true" }} 
+        {{ $posts := $allposts | intersect $notunlisted }}
+        {{ $paginator := .Paginate $posts }}
+        {{ range $paginator.Pages }} {{ partial "article-list/default" . }} {{ end }}
+    </section>
+    {{ if gt $paginator.TotalPages 1}} {{ partial "pagination" . }} {{ end }}
+</main>
+{{ end }}

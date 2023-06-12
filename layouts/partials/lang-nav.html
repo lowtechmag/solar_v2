@@ -1,0 +1,12 @@
+<div id="lang-menu" title="languages">
+  <svg id="globe" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.97 19.97"><circle class="stroke" cx="9.99" cy="9.99" r="9.24"/><ellipse class="stroke" cx="9.99" cy="9.99" rx="4.63" ry="9.24"/><line class="stroke" x1="9.99" y1="0.75" x2="9.99" y2="19.22"/><line class="stroke" x1="18.39" y1="12.99" x2="1.58" y2="12.99"/><line class="stroke" x1="18.39" y1="6.99" x2="1.58" y2="6.99"/></svg>
+</div>
+<nav id="languages">
+<ul> 
+{{ range $.Site.Home.AllTranslations }}
+  <li>
+    <a class="lang-option" href="{{ .Permalink }}">{{ .Language.LanguageName}}</a>
+  </li>
+{{ end }}
+</ul>
+</nav>

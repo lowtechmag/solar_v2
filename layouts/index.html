@@ -1,0 +1,26 @@
+{{ define "main" }}
+<main class="home article-list" >
+    <!-- Recent Articles -->
+    {{ $allposts := where .Site.RegularPages "Type" "in" "posts" }}
+   
+    {{ $notunlisted := where .Site.RegularPages ".Params.unlisted" "!=" "true" }}
+    {{ $posts := $allposts | intersect $notunlisted }}
+    {{ $pages := after 1 $posts.ByDate.Reverse }}
+    {{ $recent := first 1 $posts.ByDate.Reverse }}
+
+    <section id="home-listing" class="grid">
+        {{ $paginator := .Paginate $pages }}
+        {{ if not $paginator.HasPrev }}
+            {{ range $recent }}
+                {{ partial "article-list/featured" . }}
+            {{ end }}
+        {{ end }}
+        {{ range $paginator.Pages }}
+            {{ partial "article-list/default" . }}
+        {{ end }}
+    </section>
+    {{ if gt $paginator.TotalPages 1}}
+    {{ partial "pagination" . }}
+    {{ end }}
+</main>
+{{ end }}

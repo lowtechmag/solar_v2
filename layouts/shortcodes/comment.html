@@ -1,0 +1,5 @@
+{{ $optBlock := dict "display" "block" }}
+<div class="comment">
+	<h5>{{ .Get "name" }}</h5>
+	{{ .Inner | $.Page.RenderString $optBlock }}
+</div>

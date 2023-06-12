@@ -1,0 +1,19 @@
+ <div class="cover {{ range .Params.categories }} {{ . | urlize }} {{ end }}">
+	<a href="{{.Permalink}}"> 
+	<div class="text">
+		<h2 class="entry-title">{{ .Title }}</h2>
+		<p class="index-summary">
+			{{ .Summary}}
+		</p>
+		<time class="published">{{.Date | time.Format ":date_long"}}</time>
+	</div>
+	<div class="image"> 
+		{{$url := .Permalink}}
+		{{$filename := strings.Replace .Params.featured_image (path.Ext .Params.featured_image) "_dithered.png"}}
+		{{ $imgurl := path.Join "images" "dithers" $filename }}
+		{{ with .Resources.GetMatch $imgurl }}          
+		<div class="featured-img" style="background-image: url('{{ .Permalink }}');"></div>
+		{{ end }}
+	</div>
+	</a>
+</div>

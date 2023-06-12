@@ -1,0 +1,81 @@
+{{ define "main" }}
+<main id="archive-list">
+    <header>
+        <h1 class="entry-title">{{i18n "archives" | default .Title}}</h1>
+    </header>
+    <div id="filters">
+        <div class="filter active desc" id="date">
+            Date
+        </div>
+
+        <div class="filter asc" id="title">
+            Title
+        </div>
+
+        <div class="filter asc" id="cat">
+            Theme
+        </div>
+    </div>
+
+    <ul>
+        {{ $posts := where .Site.RegularPages "Type" "in" "posts" }} {{ $notunlisted := where .Site.RegularPages ".Params.unlisted" "!=" "true" }} {{ $archive := $posts | intersect $notunlisted }} {{ range $archive.ByDate.Reverse }}
+        <li class="{{ range .Params.categories }} {{ . | urlize }} {{ end }}">
+            <article>
+                <time class="published" datetime="{{.Date }}">{{.Date | time.Format ":date_long"}}</time>
+                <div class="article-title"><a href="{{.Permalink}}" rel="bookmark" title="{{.Title}}">{{.Title}}</a></div>
+                <div class="category">
+                    {{ range .Params.categories }} {{ . }} {{ end }}
+                </div>
+            </article>
+        </li>
+        {{end}}
+    </ul>
+    <!-- /#archive-list -->
+</main>
+
+
+<!-- LIST SORTING-------------->
+<script src="{{ .Site.BaseURL }}js/tinysort.min.js"></script>
+<script>
+    var listElements = document.querySelectorAll('#archive-list ul li');
+    var filters = document.getElementsByClassName('filter');
+    for (var i = 0; i < filters.length; i++) {
+        filters[i].addEventListener('click', sort, false);
+    }
+
+    function sort() {
+        for (var j = 0; j < filters.length; j++) {
+            filters[j].classList.remove('active');
+        }
+        this.classList.add('active');
+        this.classList.toggle('desc');
+        this.classList.toggle('asc');
+        var type = (this).id;
+        switch (type) {
+            case "title":
+                tinysort(listElements, {
+                    selector: 'div.article-title a',
+                    attr: "title",
+                    order: (this.isAsc = !this.isAsc) ? 'asc' : 'desc'
+                });
+                break;
+            case "date":
+                tinysort(listElements, {
+                    selector: 'time.published',
+                    attr: 'datetime',
+                    order: (this.isAsc = !this.isAsc) ? 'asc' : 'desc'
+                });
+                break;
+            case "cat":
+                tinysort(listElements, {
+                    selector: '.category',
+                    order: (this.isAsc = !this.isAsc) ? 'asc' : 'desc'
+
+                });
+                break;
+        }
+    }
+</script>
+
+
+{{end}}

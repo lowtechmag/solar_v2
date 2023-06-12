@@ -1,0 +1,16 @@
+{{- $old_filename := .Get "src" -}}
+{{- $img := (.Page.Resources.ByType "image").GetMatch (path.Join "images" $old_filename ) -}}
+{{- if $img -}}
+{{- $alt  := .Inner -}}
+{{- $new_filename := replace $old_filename (path.Ext $old_filename) "" -}}
+{{- $dithered := printf "images/dithers/%s_dithered.png" $new_filename -}}
+{{ $dithered_image := (.Page.Resources.ByType "image").GetMatch $dithered }}
+<div class="article-img {{if le $img.Width $img.Height}} vertical{{end}}">
+<figure data-imgstate="dither">
+<img src="{{with $dithered_image }}{{ .Permalink }}{{end}}" alt='{{ with $alt   }}{{ $alt | markdownify| plainify }}{{ else }}{{ .Get "alt" }}{{ . | markdownify| plainify }}{{ end }}' loading="lazy"/></figure>
+<figcaption class="caption">
+{{ .Inner }}
+</figcaption>
+</div>
+</div>
+{{end}}

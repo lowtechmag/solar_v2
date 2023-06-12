@@ -1,0 +1,25 @@
+{{ define "main" }}
+<main class="author-list">
+    <header>
+      <h1 class="entry-title">{{.Title }}</h1>
+    </header>
+    
+    <section id="list">
+        <div class="entry-content">
+         {{ range .Data.Terms.ByCount }} 
+           <ul class="page-list">
+               <li class="author-item"> 
+                   <a href="{{ .Page.Permalink }}">
+                   {{ .Page.Title }} 
+                   </a> ({{ .Count }}) 
+               </li> 
+           </ul>
+    {{ end }}
+        {{ if or (eq .Data.Plural "authors") (eq .Data.Plural "translators")}}
+        <h4>See all <a href="{{ absLangURL "contributors" }}">{{i18n "contributors" | default "Contributors" }}</a> ({{ .Language.LanguageName}})</h4>
+        {{end}}
+        </div>   
+     
+    </section>
+</main>
+{{ end }}

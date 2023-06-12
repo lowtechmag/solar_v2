@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+
+	<link rel="icon" href="{{ .Site.BaseURL }}icons/sun.svg">
+
+	{{ $style := resources.Get "/css/style.scss" | resources.ToCSS }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}">
+
+	{{- partial "feeds" . -}}
+	{{- partial "opengraph" . -}}
+	
+
+</head>
+<body id="{{ .Title | urlize }}">
+	{{ partial "battery" . }}
+	{{ partial "header" . }}
+	{{ block "main" . }}{{ end }}
+	{{ partial "footer" . }}
+
+	<script src="{{ .Site.BaseURL }}js/script.js"></script>
+</body>
+</html>

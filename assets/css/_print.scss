@@ -1,0 +1,84 @@
+@media print {
+	html {
+		font-size: 10.5pt;
+	}
+	body {
+		background: none;
+	}
+	h1, footer h2 {
+		font-size: 1.2rem;
+		margin: 0;
+		display: inline-block;
+	}
+	.subtitle {
+		display: inline-block;
+		margin: 0;
+		.icon {
+			height: 1rem;
+		}
+	}
+	h1.entry-title {
+		font-size: 2rem;
+		margin-top: 2rem;
+	}
+	p.summary {
+		margin-bottom: 1rem;
+	}
+	.entry-content {
+		columns: 2;
+		column-gap: 20pt;
+		a {
+			text-decoration: none;
+		}
+		a:after {
+			content:" (" attr(href) ") ";
+			font-size: var(--font-small);
+			font-weight: normal;
+		}
+		h2 {
+			font-size: 1.5rem;
+			margin-bottom: 0.5rem;
+		}
+		figure {
+			max-width: none;
+			margin: 1rem auto 0.5rem auto;
+			background-color: white !important;
+			mix-blend-mode: normal !important;
+			page-break-inside: avoid;
+			img {
+				max-width: 100%;
+				mix-blend-mode: normal !important;
+			}
+		}
+		.caption {
+			margin-bottom: 1rem;
+		}
+		h2, h3, p, .footnote {
+			max-width: none;
+			width: 100%;
+		}
+		p {
+			margin: 0;
+			line-height: 1.2;
+			text-indent: 2rem;
+		}
+		h2+p, .caption, .caption+p, .footnote p {
+			text-indent: 0;
+		}
+		blockquote p {
+			line-height: 1.1;
+			text-indent: 0;
+			margin: 1rem 0;
+			page-break-inside: avoid;
+		}
+	}
+	#battery_data {
+		display: none;
+	}
+	nav, #battery, #comment-list, #related, #post-nav, ul.cols .featured-img, footer .dashboard {
+		display: none;
+	}
+	ul.cols	li {
+		max-width: 50%;
+	}
+}
