@@ -201,26 +201,6 @@ It can be used in `cron` to make a daily build at 12:15 and log the output.
 
 `15 12 * * * /bin/bash /path/to/repo/utils/build_site.sh > /path/to/build.log 2>&1`
 
-## pelican to hugo converter
-
-`convert_to_hugo.py` converts posts of the Pelican format of Solar v1 to Hugo Page Bundles. Needs to be run only **once and never again** because it will _overwrite whatever you have in your content folder!_
-
-You need to edit the file to set the input and output paths etc.
-
-**N.B. this tool will do 95.3% of the work but you will need to manually fix a few individual files**
-
-### Installation & Dependencies
-
-depends on [jinja2](https://jinja.palletsprojects.com/en/3.1.x/)
-
-`pip install jinja2`
-
-### Usage
-
-You need to first edit the file to set the input and output paths. These can be found around line 20.
-
-`python3 utils/convert_to_hugo.py`
-
 # Contributions
 
 The Solar v.2 theme was made by
