@@ -212,4 +212,8 @@ The Solar v.2 theme was made by
 With contributions by
 * [Erhard Maria Klein](http://www.weitblick.de/)
 
+# Donations
+
+If Low-Tech Magazine or this theme has been useful to your work, please support us by making a one time donation [through Paypal](https://www.paypal.com/paypalme/lowtechmagazine) or a recurring one [through Patreon](https://solar.lowtechmagazine.com/donate/) 
+
 [^1]: Marie and Roel created the [original Pelican theme](https://github.com/lowtechmag/solar) for the first version of https://solar.lowtechmagazine.com
