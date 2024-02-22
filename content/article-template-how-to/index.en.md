@@ -4,7 +4,7 @@ date: ""
 summary: "This page goes over the specific markdown syntax that should be used to write articles, add translations and comments in the new hugo solar web. "
 lang: "en"
 authors: ["Marie Verdeil" ]
-categories: [""]
+categories: ["High-tech Problems"]
 tags: [""]
 unlisted: true
 draft: false

@@ -1,26 +1,12 @@
 [sitesubtitle]
-    other = 'Este site é movido a energia solar, o que significa que, às vezes, ele fica fora do ar.'
+    other = 'Baseado no tema solar_v2 de solar.lowetechmagazine'
 
-[lowtechtitle]
-    other = 'Soluções de baixa tecnologia'
-[lowtechdescription]
-    other = 'Possibilidades interessantes surgem quando você combina tecnologias antigas com conhecimentos e materiais novos, ou quando você aplica antigos conceitos e conhecimentos tradicionais a tecnologias modernas.'
-[hightechtitle]
-    other = 'Problemas de alta tecnologia'
-[hightechdescription]
-    other = 'A tecnologia se tornou o ídolo de nossa sociedade, mas o progresso tecnológico é -- na maioria das vezes -- direcionado à resolução de problemas causados por invenções técnicas anteriores.'
-[obsoletetitle]
-    other = 'Tecnologias obsoletas'
-[obsoletedescription]
-    other = 'Há muito potencial em conhecimentos e tecnologias passadas -- e muitas vezes esquecidas -- quando se trata de projetar uma sociedade sustentável.'
-[offline]
-    other = 'Lendo Offline'
+[about]
+    other = 'Acerca de'
 [donate]
     other = 'Faça uma doação'
 [trans]
     other = ''
-[newsletterlink]
-    other = 'https://d69baa34.sibforms.com/serve/MUIEANc2lrp0ZlxefJj9bGWkRWAP8XKI8G25tXyMryhx1Q6iKLoxg-A9u3QuJxksFS7rQuYNdNjVBqcJfwig9kXB6QzKRFg0KK2ZhiJjarVqjLKhFw2Ej58I5aLFMcgBWzD0MrDKgWiQgF_qMW1-rhMF_nsEY44QyiGRITSt0oJGZGZMjXkhgKH6t_x5-HgMgcnO1J4fSoQ_2iw-'
 [pagesize]
     other = ''
 [written_by]
@@ -40,11 +26,5 @@
 [viewdither]
 	other = ''
 # post-footer	
-[subscribeNEWS]
-	other = 'Inscreva-se em nossa newsletter (english)'
 [supportLTM]
 	other = 'Apoie a Low-tech Magazine via'
-[or]
-	other = 'or'
-[readoffline]
-	other = 'Compre a versão impressa do site (english)'

@@ -1,7 +1,7 @@
 ---
 title: Translators
 lang: en
-summary: "Authors and translators for LOW←TECH MAGAZINE"
+summary: "Authors and translators"
 layout: contributors
 ---
 
