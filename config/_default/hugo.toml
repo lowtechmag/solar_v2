@@ -49,7 +49,7 @@ enableInlineShortcodes = true
 
 [params]
 	author = "Mateus Melo"
-  newsletter = "https://d69baa34.sibforms.com/serve/MUIEAJWIw9w82Dl4ua6FQArPaI-3Qb-zVTwPNabHQgFH51MiGF69Smy9LOC_HPoUmBj0emaXsXT87gcQXDPvtu-AZsJCHWhkkv21CdrcQu4GdnYAhZ-MrIPhwGDecagLzYxqfvkaqXg2ODcbJU4ByoDmzJK3ZTczDo2jcWtfn-En0MGKLVkgxx9TgdHqYoPabMJCMF-agLEclEwv"
+  newsletter = ""
   description = "Based on solar.lowtechmagazine solar_v2 theme"
 
 [menu]
@@ -74,7 +74,7 @@ enableInlineShortcodes = true
 [[menu.main]]
   identifier = "articletemplatehowto"
   name = "Article Template How To"
-  url = "/article-template-how-to"
+  url = "/article-template-how-to/"
   weight = 9
 
 defaultContentLanguage = 'en'

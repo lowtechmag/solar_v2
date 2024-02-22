@@ -1,6 +1,6 @@
 ---
 title: Archive
-slug: archives
+slug: archive
 lang: en
 summary: archive intro
 layout: archive

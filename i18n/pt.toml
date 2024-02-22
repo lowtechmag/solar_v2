@@ -3,8 +3,12 @@
 
 [about]
     other = 'Acerca de'
+[archive]
+    other = 'Arquivo'
 [donate]
     other = 'Faça uma doação'
+[articletemplatehowto]
+	other = 'Template de Artigo Como Fazer'
 [trans]
     other = ''
 [pagesize]
@@ -25,6 +29,10 @@
 	other = ''
 [viewdither]
 	other = ''
-# post-footer	
+# post-footer
+[subscribeNEWS]
+	other = 'Se inscreva no nosso boletim de notícias'
 [supportLTM]
-	other = 'Apoie a Low-tech Magazine via'
+	other = 'Apoie-nos no'
+[readoffline]
+	other = 'Leia nosso site offline'
