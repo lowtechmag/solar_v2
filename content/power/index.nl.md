@@ -4,7 +4,7 @@ date: ""
 summary: "Deze website draait op [zonne-energie](/nl/about/the-solar-website). De server staat opgesteld in Barcelona en gaat offline gedurende langere periodes van slecht weer. Deze pagina geeft \"live\" informatie weer over de productie van zonne-energie, de energieopslag, en het energieverbruik van de website."
 slug: "power"
 lang: "nl"
-authors: ["" ]
+authors: [""]
 categories: [""]
 tags: []
 featured_image: "solar-powered-server-weather-2.png"

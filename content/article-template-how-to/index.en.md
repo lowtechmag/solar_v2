@@ -3,7 +3,7 @@ title: "Article Template: How to write articles and translations in Markdown for
 date: ""
 summary: "This page goes over the specific markdown syntax that should be used to write articles, add translations and comments in the new hugo solar web. "
 lang: "en"
-authors: ["Marie Verdeil" ]
+authors: ["Marie Verdeil"]
 categories: [""]
 tags: [""]
 unlisted: true
@@ -144,9 +144,9 @@ title: "Article Title"
 date: "2015-10-26"
 summary: "Article Summary"
 lang: "en"
-authors: ["Kris De Decker" ]
+authors: ["Kris De Decker"]
 categories: ["Low-tech Solutions"]
-tags: ["tag", "tag2" ]
+tags: ["tag", "tag2"]
 translators: [""]
 featured_image: "image.png"
 draft: false
@@ -170,9 +170,9 @@ lang: "en"
 
 - The authors, tags and translators fields support several entry, using this syntax:
 ```yaml
-authors: ["Kris De Decker" ]
-authors: ["Kris De Decker", "Roel Roscam Abbing" ]
-tags: ["ICT", "transportation" ] 
+authors: ["Kris De Decker"]
+authors: ["Kris De Decker", "Roel Roscam Abbing"]
+tags: ["ICT", "transportation"] 
 ```
 - The correct spelling for categories is:
  `"Low-tech Solutions"` (Blue), `"High-tech Problems"` (Red),  `"Obsolete Technology"` (Green),  `"About"` or `" "` (BW)
@@ -293,7 +293,7 @@ Captions are handy to include sources and additional info but are also useful fo
 
 To render uncompressed images (not dithered and not compressed in `.webp`), use the normal markdown syntax. This comes in handy for comic pages, for example. Please pre-compress the images to prevent overcrowding the server with big files. 
 ```markdown
-![here goes your alt text ](image-filename.png)
+![here goes your alt text](image-filename.png)
 ```
 
 
@@ -337,9 +337,9 @@ translators: ["add translator name", "other translator"]
 - _Front matter that shouldn't change, no matter the language:_
 ```yaml
 ---
-authors: ["Kris De Decker" ]
+authors: ["Kris De Decker"]
 categories: ["Low-tech Solutions"]
-tags: ["tag", "tag2" ]
+tags: ["tag", "tag2"]
 featured_image: "image.png"
 draft: false
 ---
