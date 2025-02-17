@@ -10,7 +10,7 @@
 
 	<link rel="icon" href="{{ .Site.BaseURL }}icons/sun.svg">
 
-	{{ $style := resources.Get "/css/style.scss" | resources.ToCSS }}
+	{{ $style := resources.Get "/css/style.scss" | css.Sass }}
 	<link rel="stylesheet" href="{{ $style.Permalink }}">
 
 	{{- partial "feeds" . -}}
