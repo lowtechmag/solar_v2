@@ -2,7 +2,7 @@
 {{- with site.GetPage $path -}}
   {{- .Permalink -}}
 {{- else -}}
-  {{- with .Page.Sites.First.GetPage $path -}}
+  {{- with .Page.Sites.Default.GetPage $path -}}
     {{- .Permalink -}}
  {{/*  code to produce errors on not found  */}}
   {{- else -}}
