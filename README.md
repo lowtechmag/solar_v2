@@ -4,7 +4,7 @@
 - Builds the entire site in minutes rather than hours :)
 - Makes use of additional taxonomies that are possible in Hugo
 
-Requires Hugo 0.10x or newer!
+Requires Hugo 0.145 or newer!
 
 ## Local Development
 ```
