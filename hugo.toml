@@ -4,7 +4,7 @@ title = 'LOW←TECH MAGAZINE'
 
 buildFuture = true
 buildDrafts = false
-paginate = 12
+pagination.pagerSize = 12
 
 DefaultContentLanguage = 'en'
 defaultContentLanguage = 'en'
