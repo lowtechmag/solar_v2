@@ -66,9 +66,9 @@ date: "2015-10-26"
 summary: "If we want the internet to keep working in circumstances where access to energy is more limited, we can learn important lessons from alternative network technologies."
 slug: "how-to-build-a-low-tech-internet"
 lang: "en"
-authors: ["Kris De Decker" ]
+authors: ["Kris De Decker"]
 categories: ["Low-tech Solutions"]
-tags: ["ICT" ]
+tags: ["ICT"]
 featured_image: "tegola-project-low-tech-internet.png"
 draft: false
 ---
@@ -89,12 +89,12 @@ date: "2015-10-26"
 summary: "Si queremos que internet siga funcionando en circunstancias en que el acceso a la energía es más limitado, entonces podemos aprender lecciones importantes de las tecnologías de red alternativas." #TO TRANSLATE
 slug: "how-to-build-a-low-tech-internet"
 lang: "es" #ADD THE CORRECT LANG code (fr, es, etc.)
-authors: ["Kris De Decker" ]
+authors: ["Kris De Decker"]
 categories: ["Low-tech Solutions"]
-tags: ["ICT" ] 
+tags: ["ICT"] 
 featured_image: "tegola-project-low-tech-internet.png"
 translators: ["Colectivo Disonancia"] #ADD TRANSLATOR FOR THIS LANGUAGE
-draft: False
+draft: false
 ---
 ```
 
@@ -102,7 +102,7 @@ To add several authors or several tags, we use the following syntax:
 
 ```
 ---
-authors: ["Kris De Decker","Marie Verdeil" ]
+authors: ["Kris De Decker", "Marie Verdeil"]
 tags: ["ICT", "another tag", "another other tag"]
 ---
 ``` 
