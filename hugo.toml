@@ -44,7 +44,7 @@ enableInlineShortcodes = true
   categories = '/:slug/'
 
 [params]
-  author = 'Kris De Decker'
+  author = { name = "Kris De Decker", email = "solar@lowtechmagazine.com" }
   newsletter = 'https://d69baa34.sibforms.com/serve/MUIEAJWIw9w82Dl4ua6FQArPaI-3Qb-zVTwPNabHQgFH51MiGF69Smy9LOC_HPoUmBj0emaXsXT87gcQXDPvtu-AZsJCHWhkkv21CdrcQu4GdnYAhZ-MrIPhwGDecagLzYxqfvkaqXg2ODcbJU4ByoDmzJK3ZTczDo2jcWtfn-En0MGKLVkgxx9TgdHqYoPabMJCMF-agLEclEwv'
   description = 'This is a solar-powered website, which means it sometimes goes offline'
 

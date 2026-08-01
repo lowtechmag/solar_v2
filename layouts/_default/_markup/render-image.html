@@ -4,7 +4,7 @@
 {{- $img = resources.Get $path -}}
 {{- end -}}
 {{- with $img -}}
-<img class="uncompressed" src="{{ $img.RelPermalink }}" alt="{{ $.Text }}" />
+<img class="uncompressed" src="{{ $img.RelPermalink }}" alt="{{ $.Text }}" width="{{ .Width }}" height="{{ .Height }}" />
 {{- else -}}
 <img class="uncompressed"  src="{{ .Destination | safeURL }}" alt="{{ $.Text }}" />{{- end -}}
 
